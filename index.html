@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Sales Analysis — Portfolio Project</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg: #0a0e1a;
+    --bg2: #111827;
+    --bg3: #1a2235;
+    --card: #141d2e;
+    --border: #1e2d45;
+    --accent: #3b82f6;
+    --accent2: #06b6d4;
+    --accent3: #10b981;
+    --accent4: #f59e0b;
+    --accent5: #ef4444;
+    --accent6: #8b5cf6;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --muted2: #94a3b8;
+    --success: #10b981;
+    --warning: #f59e0b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* ---- HEADER ---- */
+  .header {
+    background: linear-gradient(135deg, #0d1421 0%, #111827 50%, #0d1a2d 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header::after {
+    content: '';
+    position: absolute; bottom: -40px; left: 200px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .header-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.25);
+    color: var(--accent);
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
+  }
+  .header-tag::before { content: '●'; font-size: 7px; animation: blink 1.5s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .header h1 {
+    font-size: 30px; font-weight: 700; line-height: 1.2;
+    background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+  }
+  .header h1 span {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .header-sub {
+    color: var(--muted2); font-size: 13px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 4px;
+  }
+  .header-sub span { display: flex; align-items: center; gap: 5px; }
+  .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--muted); }
+
+  /* ---- MAIN LAYOUT ---- */
+  .main { padding: 28px 40px; max-width: 1400px; margin: 0 auto; }
+
+  /* ---- SECTION TITLE ---- */
+  .section-title {
+    font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px; margin-top: 32px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* ---- KPI CARDS ---- */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 8px;
+  }
+  .kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative; overflow: hidden;
+  }
+  .kpi-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+  }
+  .kpi-card.blue::before  { background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .kpi-card.green::before { background: linear-gradient(90deg, var(--accent3), #34d399); }
+  .kpi-card.amber::before { background: linear-gradient(90deg, var(--accent4), #fbbf24); }
+  .kpi-card.purple::before{ background: linear-gradient(90deg, var(--accent6), #a78bfa); }
+  .kpi-label { font-size: 11px; font-weight: 500; letter-spacing: 0.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; }
+  .kpi-value { font-family: 'Space Mono', monospace; font-size: 22px; font-weight: 700; line-height: 1; margin-bottom: 6px; }
+  .kpi-card.blue  .kpi-value { color: var(--accent); }
+  .kpi-card.green .kpi-value { color: var(--accent3); }
+  .kpi-card.amber .kpi-value { color: var(--accent4); }
+  .kpi-card.purple .kpi-value{ color: var(--accent6); }
+  .kpi-sub { font-size: 11px; color: var(--muted2); }
+
+  /* ---- CHART CARDS ---- */
+  .chart-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .chart-grid-3 { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .chart-grid-32 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+  .chart-card.full { grid-column: 1 / -1; }
+  .chart-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .chart-sub { font-size: 11px; color: var(--muted); margin-bottom: 16px; }
+  .chart-wrap { position: relative; }
+
+  /* ---- RFM TABLE ---- */
+  .rfm-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }
+  .rfm-pill {
+    border-radius: 8px; padding: 14px 16px;
+    display: flex; justify-content: space-between; align-items: center;
+    border: 1px solid;
+  }
+  .rfm-pill .rfm-name { font-size: 12px; font-weight: 600; }
+  .rfm-pill .rfm-count { font-family: 'Space Mono', monospace; font-size: 20px; font-weight: 700; }
+
+  .rfm-champions   { background: rgba(16,185,129,0.08); border-color: rgba(16,185,129,0.25); color: #34d399; }
+  .rfm-loyal       { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.25); color: #60a5fa; }
+  .rfm-potential   { background: rgba(6,182,212,0.08); border-color: rgba(6,182,212,0.25); color: #22d3ee; }
+  .rfm-new         { background: rgba(139,92,246,0.08); border-color: rgba(139,92,246,0.25); color: #a78bfa; }
+  .rfm-risk        { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.25); color: #fbbf24; }
+  .rfm-lost        { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.25); color: #f87171; }
+
+  /* ---- INSIGHT PANEL ---- */
+  .insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .insight-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px;
+  }
+  .insight-icon { font-size: 20px; margin-bottom: 10px; }
+  .insight-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+  .insight-body { font-size: 12px; color: var(--muted2); line-height: 1.7; }
+  .insight-body strong { color: var(--accent2); font-weight: 600; }
+  .tag {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    padding: 2px 8px; border-radius: 4px; margin-right: 4px; margin-top: 6px;
+  }
+  .tag-green { background: rgba(16,185,129,0.15); color: #34d399; }
+  .tag-blue  { background: rgba(59,130,246,0.15); color: #60a5fa; }
+  .tag-red   { background: rgba(239,68,68,0.15);  color: #f87171; }
+  .tag-amber { background: rgba(245,158,11,0.15); color: #fbbf24; }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 11px; color: var(--muted);
+    margin-top: 20px;
+  }
+  .footer strong { color: var(--muted2); }
+
+  /* ---- SCROLLBAR ---- */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  @media (max-width: 900px) {
+    .main { padding: 16px; }
+    .header { padding: 20px; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .chart-grid-2, .chart-grid-3, .chart-grid-32 { grid-template-columns: 1fr; }
+    .insight-grid { grid-template-columns: 1fr; }
+    .rfm-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-tag">Day 6 · Advanced SQL · Mini Project</div>
+  <h1>E-Commerce <span>Sales Analysis</span></h1>
+  <div class="header-sub">
+    <span>📅 Periode: Jan 2023 – Jun 2024</span>
+    <div class="dot"></div>
+    <span>🗄️ SQLite · 5 Tables · 4,715 Records</span>
+    <div class="dot"></div>
+    <span>📊 10 SQL Queries · 10 CSV Export</span>
+    <div class="dot"></div>
+    <span>🔍 RFM · Cohort · Profit Analysis</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- KPI -->
+  <div class="section-title">Key Performance Indicators</div>
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-label">Total Revenue</div>
+      <div class="kpi-value">Rp23,87M</div>
+      <div class="kpi-sub">18 bulan (Jan 2023–Jun 2024)</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Gross Profit</div>
+      <div class="kpi-value">Rp5,95M</div>
+      <div class="kpi-sub">Avg margin 24,9% per bulan</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">Total Orders</div>
+      <div class="kpi-value">1.691</div>
+      <div class="kpi-sub">Status: Completed only</div>
+    </div>
+    <div class="kpi-card purple">
+      <div class="kpi-label">Active Customers</div>
+      <div class="kpi-value">300</div>
+      <div class="kpi-sub">50 Champions · 83 Loyal</div>
+    </div>
+  </div>
+
+  <!-- MONTHLY REVENUE -->
+  <div class="section-title">Trend Revenue & Profit Bulanan</div>
+  <div class="chart-card" style="margin-bottom:20px">
+    <div class="chart-title">Revenue vs Gross Profit — Monthly Trend (Jan 2023 – Jun 2024)</div>
+    <div class="chart-sub">Bar = Revenue (Rp) · Line = Gross Profit · Completed orders only</div>
+    <div class="chart-wrap" style="height:260px"><canvas id="chartMonthly"></canvas></div>
+  </div>
+
+  <!-- CATEGORY & TOP PRODUCT -->
+  <div class="chart-grid-3">
+    <div class="chart-card">
+      <div class="chart-title">Top 10 Products by Revenue</div>
+      <div class="chart-sub">Completed orders · semua periode</div>
+      <div class="chart-wrap" style="height:260px"><canvas id="chartProducts"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Revenue by Department</div>
+      <div class="chart-sub">Proporsi kontribusi per divisi</div>
+      <div class="chart-wrap" style="height:260px"><canvas id="chartDept"></canvas></div>
+    </div>
+  </div>
+
+  <!-- SEGMENT & PAYMENT -->
+  <div class="chart-grid-2">
+    <div class="chart-card">
+      <div class="chart-title">Revenue by Customer Segment</div>
+      <div class="chart-sub">Regular · Silver · Gold · Platinum</div>
+      <div class="chart-wrap" style="height:220px"><canvas id="chartSegment"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Payment Method Distribution</div>
+      <div class="chart-sub">Jumlah order per metode pembayaran</div>
+      <div class="chart-wrap" style="height:220px"><canvas id="chartPayment"></canvas></div>
+    </div>
+  </div>
+
+  <!-- RFM -->
+  <div class="section-title">RFM Customer Segmentation</div>
+  <div class="rfm-grid" style="margin-bottom:20px">
+    <div class="rfm-pill rfm-champions">
+      <div>
+        <div class="rfm-name">🏆 Champions</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">RFM Score ≥ 13</div>
+      </div>
+      <div class="rfm-count">50</div>
+    </div>
+    <div class="rfm-pill rfm-loyal">
+      <div>
+        <div class="rfm-name">💎 Loyal Customers</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">RFM Score 10–12</div>
+      </div>
+      <div class="rfm-count">83</div>
+    </div>
+    <div class="rfm-pill rfm-potential">
+      <div>
+        <div class="rfm-name">⭐ Potential Loyalist</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">Mid-tier score</div>
+      </div>
+      <div class="rfm-count">54</div>
+    </div>
+    <div class="rfm-pill rfm-new">
+      <div>
+        <div class="rfm-name">🆕 New Customers</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">High R, Low F</div>
+      </div>
+      <div class="rfm-count">22</div>
+    </div>
+    <div class="rfm-pill rfm-risk">
+      <div>
+        <div class="rfm-name">⚠️ At Risk</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">Low R, High M</div>
+      </div>
+      <div class="rfm-count">16</div>
+    </div>
+    <div class="rfm-pill rfm-lost">
+      <div>
+        <div class="rfm-name">💀 Lost Customers</div>
+        <div style="font-size:10px;margin-top:3px;opacity:0.8">RFM Score ≤ 6</div>
+      </div>
+      <div class="rfm-count">75</div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS -->
+  <div class="section-title">Key Business Insights</div>
+  <div class="insight-grid">
+    <div class="insight-card">
+      <div class="insight-icon">📈</div>
+      <div class="insight-title">Revenue Trend & Seasonality</div>
+      <div class="insight-body">
+        Revenue tertinggi terjadi pada <strong>Januari 2024 (Rp1,84M)</strong> dan <strong>Desember 2023 (Rp1,81M)</strong>, mengindikasikan adanya <strong>holiday effect</strong> dan awal tahun boost. Terjadi penurunan signifikan di bulan <strong>Juni 2023 (Rp772jt)</strong> — perlu investigasi campaign. Margin stabil di kisaran <strong>23–26%</strong> sepanjang periode.
+        <br><span class="tag tag-green">Trend: Positif</span>
+        <span class="tag tag-amber">Watch: Q2 dip</span>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-icon">💻</div>
+      <div class="insight-title">Electronics Dominasi Revenue</div>
+      <div class="insight-body">
+        <strong>Laptop (Rp13,96M)</strong> dan <strong>Smartphone (Rp6,81M)</strong> mendominasi <strong>87%</strong> total revenue. MacBook Air M2 jadi produk #1. Kategori Fashion, Beauty, dan Sport hanya berkontribusi <strong>&lt;5%</strong> meskipun volume transaksinya tinggi. Perlu strategi cross-sell ke kategori margin tinggi.
+        <br><span class="tag tag-blue">Top: Electronics</span>
+        <span class="tag tag-amber">Opportunity: Fashion</span>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-icon">👥</div>
+      <div class="insight-title">Risiko Churn: 75 Lost Customers</div>
+      <div class="insight-body">
+        Sebanyak <strong>75 pelanggan (25%)</strong> masuk kategori <strong>Lost</strong> berdasarkan RFM scoring. Segmen <strong>Regular</strong> mendominasi base (165 customers) namun Average Order Value lebih rendah dari Gold/Platinum. Rekomendasi: <strong>Win-back campaign</strong> untuk At Risk (16) dan Lost sebelum churn permanen.
+        <br><span class="tag tag-red">Alert: 25% Lost</span>
+        <span class="tag tag-green">Action: Win-back</span>
+      </div>
+    </div>
+    <div class="insight-card">
+      <div class="insight-icon">💳</div>
+      <div class="insight-title">OVO & Kartu Kredit Paling Populer</div>
+      <div class="insight-body">
+        <strong>OVO (316 orders)</strong> menjadi metode pembayaran paling banyak digunakan, diikuti <strong>Kartu Kredit (292)</strong> dan <strong>COD (284)</strong>. Distribusi relatif merata antar 6 metode. Peluang: tawarkan <strong>cashback OVO</strong> untuk mendorong konversi, dan promosi Kartu Kredit cicilan untuk produk Electronics harga tinggi.
+        <br><span class="tag tag-blue">Top: OVO</span>
+        <span class="tag tag-green">Opp: CC Installment</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROVINCE -->
+  <div class="section-title">Revenue by Province</div>
+  <div class="chart-card" style="margin-bottom:20px">
+    <div class="chart-title">Top 10 Provinsi berdasarkan Revenue</div>
+    <div class="chart-sub">Completed orders · Jan 2023–Jun 2024 · dalam Miliar Rupiah</div>
+    <div class="chart-wrap" style="height:220px"><canvas id="chartProvince"></canvas></div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div>
+    <strong>Day 6 – Advanced SQL Mini Project</strong> ·
+    Dataset: SQLite · 5 Tables (categories, products, customers, orders, order_items) ·
+    1,874 Orders · 4,715 Items · 300 Customers
+  </div>
+  <div>
+    SQL Skills: JOIN · GROUP BY · CTE · WINDOW FUNCTION · NTILE · SUBQUERY · DATE FUNCTIONS
+  </div>
+</div>
+
+<script>
+Chart.defaults.color = '#64748b';
+Chart.defaults.borderColor = '#1e2d45';
+Chart.defaults.font.family = "'Space Grotesk', sans-serif";
+
+// --- MONTHLY REVENUE CHART ---
+const monthlyLabels = ["2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06"];
+const revM = [1210695950,1055736650,1466756900,1207027250,1108187250,772250600,1525577450,1608238650,1483942350,948168000,1687391600,1809590200,1840547200,1673201050,1211552250,1037178600,1252613200,971825350];
+const profM = [311535950,259721650,373701900,295477250,273647250,190505600,372932450,408213650,390547350,240578000,423271600,439520200,436642200,418476050,286647250,271958600,305163200,248530350];
+
+new Chart(document.getElementById('chartMonthly'), {
+  type: 'bar',
+  data: {
+    labels: monthlyLabels,
+    datasets: [
+      { label: 'Revenue', data: revM.map(v=>v/1e9), backgroundColor: 'rgba(59,130,246,0.3)', borderColor: '#3b82f6', borderWidth: 1.5, order: 2 },
+      { label: 'Profit', data: profM.map(v=>v/1e9), type:'line', tension:0.4, borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.08)', pointRadius:3, pointBackgroundColor:'#10b981', borderWidth:2, fill:true, order:1 }
+    ]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ labels:{ font:{size:11}, boxWidth:12 } } },
+    scales:{
+      y:{ ticks:{ callback:v=>'Rp'+v.toFixed(1)+'M', font:{size:10} }, grid:{color:'#1e2d45'} },
+      x:{ ticks:{ font:{size:9}, maxRotation:45 }, grid:{display:false} }
+    }
+  }
+});
+
+// --- TOP PRODUCTS ---
+const prodNames = ["MacBook Air M2","iPhone 15","Lenovo IdeaPad","ASUS VivoBook","Samsung A55","Sony WH-1000","Xiaomi Redmi","JBL Charge 5","Air Fryer 4L","Sepatu Lari"];
+const prodRev = [7981802950,4221336150,3377242950,2605368450,1794641000,1194477150,790355900,388465950,204911850,146905600];
+
+new Chart(document.getElementById('chartProducts'), {
+  type:'bar',
+  data:{
+    labels: prodNames,
+    datasets:[{ label:'Revenue', data:prodRev.map(v=>v/1e9),
+      backgroundColor:['#3b82f6','#06b6d4','#3b82f6','#3b82f6','#f59e0b','#8b5cf6','#f59e0b','#8b5cf6','#10b981','#10b981'],
+      borderRadius:4, borderSkipped:false }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{
+      x:{ ticks:{callback:v=>'Rp'+v.toFixed(1)+'M',font:{size:9}}, grid:{color:'#1e2d45'} },
+      y:{ ticks:{font:{size:10}}, grid:{display:false} }
+    }
+  }
+});
+
+// --- DEPT DONUT ---
+new Chart(document.getElementById('chartDept'), {
+  type:'doughnut',
+  data:{
+    labels:['Electronics','Fashion','Beauty','Home & Living','Sport'],
+    datasets:[{
+      data:[21470920400,455589000,173792700,464011250,306766850].map(v=>v/1e9),
+      backgroundColor:['#3b82f6','#f59e0b','#ec4899','#10b981','#8b5cf6'],
+      borderColor:'#141d2e', borderWidth:3
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{ position:'bottom', labels:{font:{size:10}, boxWidth:12, padding:8} },
+      tooltip:{ callbacks:{ label: ctx=>' Rp'+ctx.raw.toFixed(1)+'M' } }
+    },
+    cutout:'60%'
+  }
+});
+
+// --- SEGMENT ---
+new Chart(document.getElementById('chartSegment'), {
+  type:'bar',
+  data:{
+    labels:['Regular','Silver','Gold','Platinum'],
+    datasets:[{
+      label:'Revenue (Rp Miliar)',
+      data:[86.96,31.69,24.56,11.45],
+      backgroundColor:['rgba(59,130,246,0.7)','rgba(6,182,212,0.7)','rgba(245,158,11,0.7)','rgba(139,92,246,0.7)'],
+      borderRadius:6, borderSkipped:false
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{
+      y:{ ticks:{callback:v=>'Rp'+v+'M',font:{size:9}}, grid:{color:'#1e2d45'} },
+      x:{ grid:{display:false}, ticks:{font:{size:10}} }
+    }
+  }
+});
+
+// --- PAYMENT ---
+new Chart(document.getElementById('chartPayment'), {
+  type:'polarArea',
+  data:{
+    labels:['OVO','Kartu Kredit','COD','QRIS','GoPay','Transfer Bank'],
+    datasets:[{
+      data:[316,292,284,275,263,261],
+      backgroundColor:['rgba(16,185,129,0.7)','rgba(59,130,246,0.7)','rgba(245,158,11,0.7)','rgba(6,182,212,0.7)','rgba(139,92,246,0.7)','rgba(239,68,68,0.7)'],
+      borderColor:'#141d2e', borderWidth:2
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{position:'right',labels:{font:{size:10},boxWidth:12}} }
+  }
+});
+
+// --- PROVINCE ---
+const provLabels=['DKI Jakarta','Jawa Barat','Jawa Timur','Jawa Tengah','Bali','Sumatera Utara','DI Yogyakarta','Sumatera Selatan','Sulawesi Selatan','Kalimantan Timur'];
+const provRev=[7.2,5.8,3.4,2.1,1.6,1.2,0.9,0.7,0.5,0.4];
+new Chart(document.getElementById('chartProvince'), {
+  type:'bar',
+  data:{
+    labels:provLabels,
+    datasets:[{
+      label:'Revenue (Rp Miliar)',
+      data:provRev,
+      backgroundColor: provRev.map((v,i)=>i===0?'#3b82f6':i===1?'#06b6d4':'rgba(59,130,246,0.4)'),
+      borderRadius:5, borderSkipped:false
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false} },
+    scales:{
+      y:{ ticks:{callback:v=>'Rp'+v+'M',font:{size:9}}, grid:{color:'#1e2d45'} },
+      x:{ grid:{display:false}, ticks:{font:{size:9},maxRotation:30} }
+    }
+  }
+});
+</script>
+</body>
+</html>
