@@ -1,0 +1,301 @@
+customer_id,full_name,segment,recency_days,frequency,monetary,r_score,f_score,m_score,rfm_total,rfm_label
+24,Arif Rahman 24,Gold,157.0,4,4469050.0,5,5,5,15,Champions
+273,Budi Santoso 273,Regular,159.0,2,3722600.0,5,5,5,15,Champions
+234,Lina Marlina 234,Regular,168.0,3,11461500.0,5,5,5,15,Champions
+278,Rina Kartika 278,Gold,177.0,3,1437250.0,5,5,5,15,Champions
+252,Dian Novita 252,Silver,186.0,2,27313400.0,5,5,5,15,Champions
+182,Yusuf Hakim 182,Gold,190.0,3,4602500.0,5,5,5,15,Champions
+272,Bambang Prayogo 272,Regular,216.0,1,993000.0,5,5,5,15,Champions
+286,Rizki Pratama 286,Regular,221.0,3,11515750.0,5,5,5,15,Champions
+218,Agus Wijaya 218,Regular,228.0,2,5437100.0,5,5,5,15,Champions
+181,Rian Setiawan 181,Regular,249.0,2,1473000.0,5,5,5,15,Champions
+51,Hendra Saputra 51,Silver,285.0,2,4930650.0,5,5,5,15,Champions
+287,Deni Kurniawan 287,Regular,290.0,2,1175400.0,5,5,5,15,Champions
+115,Lina Marlina 115,Regular,314.0,3,26774850.0,5,5,5,15,Champions
+39,Fitri Rahayu 39,Gold,343.0,1,821100.0,5,5,5,15,Champions
+2,Sandi Utomo 2,Regular,357.0,1,249000.0,5,5,5,15,Champions
+298,Sri Wahyuni 298,Regular,435.0,3,25110050.0,5,5,5,15,Champions
+101,Nadia Safitri 101,Silver,473.0,2,7017600.0,5,5,5,15,Champions
+222,Fitri Rahayu 222,Regular,482.0,1,1299000.0,5,5,5,15,Champions
+221,Bambang Prayogo 221,Silver,542.0,1,4667550.0,5,5,5,15,Champions
+190,Bambang Prayogo 190,Platinum,109.0,3,8810050.0,4,5,5,14,Champions
+111,Rian Setiawan 111,Gold,122.0,1,25049300.0,4,5,5,14,Champions
+78,Nurul Hidayah 78,Silver,140.0,2,5976650.0,4,5,5,14,Champions
+163,Hendra Saputra 163,Regular,238.0,5,24860400.0,5,4,5,14,Champions
+177,Deni Kurniawan 177,Silver,283.0,4,30918000.0,5,4,5,14,Champions
+245,Rini Puspita 245,Gold,298.0,1,54867300.0,5,5,4,14,Champions
+216,Yuli Astuti 216,Regular,342.0,2,38773800.0,5,5,4,14,Champions
+225,Rizki Pratama 225,Regular,53.0,3,21997950.0,3,5,5,13,Champions
+230,Rian Setiawan 230,Platinum,55.0,2,8521650.0,3,5,5,13,Champions
+73,Sandi Utomo 73,Regular,61.0,3,20140100.0,3,5,5,13,Champions
+3,Sari Dewi 3,Regular,66.0,2,30770400.0,3,5,5,13,Champions
+241,Rian Setiawan 241,Silver,72.0,3,12606200.0,3,5,5,13,Champions
+219,Nadia Safitri 219,Gold,77.0,3,11950850.0,3,5,5,13,Champions
+239,Yusuf Hakim 239,Regular,81.0,1,2787000.0,3,5,5,13,Champions
+240,Sari Dewi 240,Silver,84.0,3,2888650.0,3,5,5,13,Champions
+23,Dian Novita 23,Regular,97.0,3,38951350.0,4,5,4,13,Champions
+184,Sri Wahyuni 184,Silver,115.0,4,31226700.0,4,4,5,13,Champions
+67,Budi Santoso 67,Platinum,122.0,2,52285650.0,4,5,4,13,Champions
+126,Putri Anjani 126,Gold,123.0,4,19155450.0,4,4,5,13,Champions
+161,Dewi Susanti 161,Regular,144.0,4,6650700.0,4,4,5,13,Champions
+185,Dewi Susanti 185,Regular,165.0,6,10006050.0,5,3,5,13,Champions
+244,Dian Novita 244,Platinum,165.0,5,56513200.0,5,4,4,13,Champions
+31,Putri Anjani 31,Silver,172.0,5,51940650.0,5,4,4,13,Champions
+197,Hendra Saputra 197,Silver,173.0,4,50369500.0,5,4,4,13,Champions
+65,Fitri Rahayu 65,Regular,173.0,3,73098350.0,5,5,3,13,Champions
+263,Fitri Rahayu 263,Regular,175.0,5,41620650.0,5,4,4,13,Champions
+83,Fajar Nugroho 83,Gold,180.0,5,42798700.0,5,4,4,13,Champions
+1,Budi Santoso 1,Regular,190.0,4,56209000.0,5,4,4,13,Champions
+279,Eko Susanto 279,Regular,225.0,5,33213100.0,5,4,4,13,Champions
+285,Eko Susanto 285,Gold,227.0,4,33389650.0,5,4,4,13,Champions
+105,Cindy Amelia 105,Silver,275.0,4,50338950.0,5,4,4,13,Champions
+198,Nadia Safitri 198,Regular,28.0,3,6407250.0,2,5,5,12,Loyal Customers
+254,Rina Kartika 254,Gold,28.0,2,14648250.0,2,5,5,12,Loyal Customers
+41,Sri Wahyuni 41,Regular,28.0,2,4659300.0,2,5,5,12,Loyal Customers
+290,Bambang Prayogo 290,Regular,32.0,3,22960700.0,2,5,5,12,Loyal Customers
+7,Dimas Firdaus 7,Regular,34.0,3,14256600.0,2,5,5,12,Loyal Customers
+260,Putri Anjani 260,Regular,65.0,3,42170450.0,3,5,4,12,Loyal Customers
+201,Putri Anjani 201,Regular,65.0,3,39895450.0,3,5,4,12,Loyal Customers
+20,Rian Setiawan 20,Regular,67.0,4,17959900.0,3,4,5,12,Loyal Customers
+32,Galih Permana 32,Gold,68.0,3,48206800.0,3,5,4,12,Loyal Customers
+113,Rian Setiawan 113,Regular,69.0,5,17113400.0,3,4,5,12,Loyal Customers
+38,Yusuf Hakim 38,Regular,86.0,5,18385300.0,3,4,5,12,Loyal Customers
+169,Nurul Hidayah 169,Platinum,88.0,3,35871550.0,3,5,4,12,Loyal Customers
+19,Dimas Firdaus 19,Regular,91.0,4,42531050.0,4,4,4,12,Loyal Customers
+127,Wahyu Hidayat 127,Regular,96.0,5,44035300.0,4,4,4,12,Loyal Customers
+146,Yuli Astuti 146,Regular,106.0,3,74772450.0,4,5,3,12,Loyal Customers
+79,Putri Anjani 79,Regular,107.0,4,34188200.0,4,4,4,12,Loyal Customers
+174,Sri Wahyuni 174,Regular,120.0,3,58049950.0,4,5,3,12,Loyal Customers
+80,Arif Rahman 80,Silver,128.0,6,25282850.0,4,3,5,12,Loyal Customers
+62,Bambang Prayogo 62,Regular,148.0,5,37808650.0,4,4,4,12,Loyal Customers
+297,Yusuf Hakim 297,Regular,154.0,6,23212650.0,4,3,5,12,Loyal Customers
+60,Sari Dewi 60,Regular,157.0,6,15665850.0,4,3,5,12,Loyal Customers
+270,Putri Anjani 270,Regular,160.0,5,57770900.0,5,4,3,12,Loyal Customers
+58,Nurul Hidayah 58,Regular,164.0,6,55583050.0,5,3,4,12,Loyal Customers
+183,Budi Santoso 183,Silver,172.0,5,64657800.0,5,4,3,12,Loyal Customers
+191,Ayu Lestari 191,Regular,187.0,4,59370950.0,5,4,3,12,Loyal Customers
+277,Maya Indah 277,Regular,192.0,4,69108850.0,5,4,3,12,Loyal Customers
+13,Eko Susanto 13,Silver,242.0,3,90126150.0,5,5,2,12,Loyal Customers
+112,Deni Kurniawan 112,Regular,12.0,3,25756550.0,1,5,5,11,Loyal Customers
+186,Bambang Prayogo 186,Silver,14.0,3,1744750.0,1,5,5,11,Loyal Customers
+99,Putri Anjani 99,Regular,15.0,3,14016650.0,1,5,5,11,Loyal Customers
+42,Hendra Saputra 42,Regular,26.0,3,54440500.0,2,5,4,11,Loyal Customers
+167,Yusuf Hakim 167,Regular,47.0,5,15091750.0,2,4,5,11,Loyal Customers
+258,Sari Dewi 258,Regular,49.0,5,15891150.0,2,4,5,11,Loyal Customers
+49,Yuli Astuti 49,Silver,55.0,6,30501250.0,3,3,5,11,Loyal Customers
+96,Rizki Pratama 96,Regular,61.0,5,31656500.0,3,4,4,11,Loyal Customers
+100,Putri Anjani 100,Regular,69.0,4,55473950.0,3,4,4,11,Loyal Customers
+118,Nadia Safitri 118,Regular,83.0,5,47987900.0,3,4,4,11,Loyal Customers
+123,Maya Indah 123,Platinum,87.0,2,57361000.0,3,5,3,11,Loyal Customers
+129,Dian Novita 129,Regular,88.0,6,27015800.0,3,3,5,11,Loyal Customers
+66,Nurul Hidayah 66,Regular,88.0,4,43913450.0,3,4,4,11,Loyal Customers
+53,Wahyu Hidayat 53,Regular,97.0,7,7938800.0,4,2,5,11,Loyal Customers
+137,Bambang Prayogo 137,Regular,99.0,3,91489950.0,4,5,2,11,Loyal Customers
+46,Arif Rahman 46,Silver,100.0,5,71228450.0,4,4,3,11,Loyal Customers
+180,Rini Puspita 180,Regular,101.0,6,38446550.0,4,3,4,11,Loyal Customers
+87,Cindy Amelia 87,Regular,102.0,4,77465250.0,4,4,3,11,Loyal Customers
+229,Hendra Saputra 229,Regular,107.0,6,41132700.0,4,3,4,11,Loyal Customers
+28,Yusuf Hakim 28,Silver,109.0,6,41191000.0,4,3,4,11,Loyal Customers
+151,Galih Permana 151,Regular,112.0,5,66052600.0,4,4,3,11,Loyal Customers
+223,Dimas Firdaus 223,Regular,126.0,6,48218650.0,4,3,4,11,Loyal Customers
+253,Deni Kurniawan 253,Regular,128.0,3,103779900.0,4,5,2,11,Loyal Customers
+268,Cindy Amelia 268,Silver,136.0,3,106457450.0,4,5,2,11,Loyal Customers
+8,Fajar Nugroho 8,Silver,151.0,3,97363100.0,4,5,2,11,Loyal Customers
+150,Maya Indah 150,Regular,181.0,4,110519450.0,5,4,2,11,Loyal Customers
+176,Dimas Firdaus 176,Regular,182.0,6,59192400.0,5,3,3,11,Loyal Customers
+295,Dewi Susanti 295,Gold,187.0,6,73992650.0,5,3,3,11,Loyal Customers
+92,Nadia Safitri 92,Regular,205.0,4,117457850.0,5,4,2,11,Loyal Customers
+289,Lina Marlina 289,Gold,209.0,5,84361150.0,5,3,3,11,Loyal Customers
+269,Deni Kurniawan 269,Regular,238.0,5,76413300.0,5,3,3,11,Loyal Customers
+147,Nadia Safitri 147,Silver,292.0,7,45714600.0,5,2,4,11,Loyal Customers
+94,Sari Dewi 94,Regular,12.0,3,54309450.0,1,5,4,10,Loyal Customers
+75,Putri Anjani 75,Platinum,14.0,4,18584250.0,1,4,5,10,Loyal Customers
+157,Sandi Utomo 157,Regular,19.0,4,25683450.0,1,4,5,10,Loyal Customers
+193,Dewi Susanti 193,Gold,24.0,4,44543550.0,2,4,4,10,Loyal Customers
+164,Rina Kartika 164,Regular,28.0,3,67045500.0,2,5,3,10,Loyal Customers
+139,Nurul Hidayah 139,Gold,34.0,6,15906450.0,2,3,5,10,Loyal Customers
+192,Galih Permana 192,Regular,38.0,5,52084150.0,2,4,4,10,Loyal Customers
+261,Fitri Rahayu 261,Regular,79.0,4,75697550.0,3,4,3,10,Loyal Customers
+160,Maya Indah 160,Regular,79.0,3,109856550.0,3,5,2,10,Loyal Customers
+102,Maya Indah 102,Regular,99.0,5,78786450.0,4,3,3,10,Loyal Customers
+88,Eko Susanto 88,Gold,110.0,6,68364200.0,4,3,3,10,Loyal Customers
+119,Fitri Rahayu 119,Regular,111.0,4,100142700.0,4,4,2,10,Loyal Customers
+16,Arif Rahman 16,Regular,113.0,4,88673200.0,4,4,2,10,Loyal Customers
+271,Putri Anjani 271,Regular,124.0,4,106290050.0,4,4,2,10,Loyal Customers
+199,Rian Setiawan 199,Gold,133.0,4,94964600.0,4,4,2,10,Loyal Customers
+103,Eko Susanto 103,Silver,137.0,9,27445250.0,4,1,5,10,Loyal Customers
+262,Yusuf Hakim 262,Regular,144.0,5,79835000.0,4,3,3,10,Loyal Customers
+68,Arif Rahman 68,Regular,146.0,5,84361050.0,4,3,3,10,Loyal Customers
+14,Nurul Hidayah 14,Regular,151.0,5,84691600.0,4,3,3,10,Loyal Customers
+299,Dimas Firdaus 299,Regular,187.0,5,113703000.0,5,3,2,10,Loyal Customers
+26,Lina Marlina 26,Regular,189.0,5,111319350.0,5,3,2,10,Loyal Customers
+37,Yuli Astuti 37,Gold,199.0,7,75833350.0,5,2,3,10,Loyal Customers
+226,Arif Rahman 226,Silver,226.0,7,83554400.0,5,2,3,10,Loyal Customers
+246,Rina Kartika 246,Gold,323.0,6,92279800.0,5,3,2,10,Loyal Customers
+266,Deni Kurniawan 266,Gold,9.0,5,40883550.0,1,4,4,9,At Risk
+156,Agus Wijaya 156,Regular,23.0,6,22978000.0,1,3,5,9,At Risk
+282,Rina Kartika 282,Regular,29.0,6,31812700.0,2,3,4,9,At Risk
+131,Nurul Hidayah 131,Regular,30.0,6,52640050.0,2,3,4,9,At Risk
+143,Yuli Astuti 143,Gold,33.0,5,74135350.0,2,4,3,9,Potential Loyalist
+209,Rizki Pratama 209,Gold,35.0,5,66224450.0,2,4,3,9,Potential Loyalist
+50,Budi Santoso 50,Gold,35.0,4,81667150.0,2,4,3,9,Potential Loyalist
+292,Sari Dewi 292,Silver,39.0,4,69886850.0,2,4,3,9,Potential Loyalist
+25,Deni Kurniawan 25,Gold,41.0,5,60865650.0,2,4,3,9,Potential Loyalist
+85,Galih Permana 85,Gold,44.0,6,48906900.0,2,3,4,9,At Risk
+82,Rian Setiawan 82,Silver,48.0,6,55344050.0,2,3,4,9,At Risk
+195,Dimas Firdaus 195,Gold,53.0,6,64170350.0,3,3,3,9,Potential Loyalist
+90,Hendra Saputra 90,Regular,54.0,7,32861100.0,3,2,4,9,Potential Loyalist
+116,Dian Novita 116,Regular,54.0,4,102516400.0,3,4,2,9,Potential Loyalist
+106,Putri Anjani 106,Regular,60.0,7,55235350.0,3,2,4,9,Potential Loyalist
+110,Sri Wahyuni 110,Regular,64.0,7,57170850.0,3,2,4,9,Potential Loyalist
+172,Rina Kartika 172,Silver,71.0,7,44030300.0,3,2,4,9,Potential Loyalist
+98,Lina Marlina 98,Silver,75.0,7,35882300.0,3,2,4,9,Potential Loyalist
+220,Ayu Lestari 220,Gold,77.0,7,55290550.0,3,2,4,9,Potential Loyalist
+29,Cindy Amelia 29,Regular,80.0,5,74918050.0,3,3,3,9,Potential Loyalist
+149,Lina Marlina 149,Gold,83.0,7,55277100.0,3,2,4,9,Potential Loyalist
+284,Bambang Prayogo 284,Regular,90.0,6,78145250.0,3,3,3,9,Potential Loyalist
+280,Maya Indah 280,Regular,91.0,5,104425350.0,4,3,2,9,Potential Loyalist
+207,Galih Permana 207,Gold,109.0,5,94769100.0,4,3,2,9,Potential Loyalist
+300,Rizki Pratama 300,Silver,112.0,6,86492300.0,4,3,2,9,Potential Loyalist
+165,Nurul Hidayah 165,Silver,117.0,8,56493450.0,4,1,4,9,New Customers
+232,Nadia Safitri 232,Regular,126.0,4,171011500.0,4,4,1,9,Potential Loyalist
+109,Wahyu Hidayat 109,Regular,135.0,5,93815200.0,4,3,2,9,Potential Loyalist
+95,Maya Indah 95,Regular,155.0,7,59910700.0,4,2,3,9,New Customers
+188,Dimas Firdaus 188,Silver,165.0,8,62146300.0,5,1,3,9,New Customers
+44,Hendra Saputra 44,Gold,213.0,9,73963200.0,5,1,3,9,New Customers
+97,Fajar Nugroho 97,Platinum,9.0,5,59856150.0,1,4,3,8,Potential Loyalist
+291,Rini Puspita 291,Platinum,11.0,6,39318750.0,1,3,4,8,At Risk
+138,Bambang Prayogo 138,Silver,14.0,6,48435150.0,1,3,4,8,At Risk
+194,Wahyu Hidayat 194,Regular,18.0,3,88882600.0,1,5,2,8,Potential Loyalist
+153,Ayu Lestari 153,Gold,19.0,4,63162850.0,1,4,3,8,Potential Loyalist
+33,Deni Kurniawan 33,Silver,21.0,4,70903350.0,1,4,3,8,Potential Loyalist
+84,Lina Marlina 84,Platinum,24.0,4,111946450.0,2,4,2,8,Potential Loyalist
+91,Yuli Astuti 91,Regular,26.0,6,78512350.0,2,3,3,8,Potential Loyalist
+145,Arif Rahman 145,Regular,28.0,6,70993950.0,2,3,3,8,Potential Loyalist
+114,Nadia Safitri 114,Silver,34.0,7,54197300.0,2,2,4,8,At Risk
+72,Rian Setiawan 72,Regular,37.0,8,47624600.0,2,2,4,8,At Risk
+11,Lina Marlina 11,Regular,43.0,6,83257000.0,2,3,3,8,Potential Loyalist
+211,Ayu Lestari 211,Regular,43.0,4,98644300.0,2,4,2,8,Potential Loyalist
+242,Hendra Saputra 242,Gold,47.0,6,65401150.0,2,3,3,8,Potential Loyalist
+259,Fitri Rahayu 259,Regular,48.0,4,104261250.0,2,4,2,8,Potential Loyalist
+237,Cindy Amelia 237,Silver,57.0,5,118540250.0,3,3,2,8,Potential Loyalist
+48,Yusuf Hakim 48,Regular,62.0,7,80347950.0,3,2,3,8,Potential Loyalist
+189,Wahyu Hidayat 189,Platinum,66.0,5,101996850.0,3,3,2,8,Potential Loyalist
+265,Dimas Firdaus 265,Regular,73.0,6,86918000.0,3,3,2,8,Potential Loyalist
+15,Rini Puspita 15,Silver,82.0,9,48036750.0,3,1,4,8,Potential Loyalist
+243,Putri Anjani 243,Gold,89.0,9,44656150.0,3,1,4,8,Potential Loyalist
+144,Fajar Nugroho 144,Silver,99.0,8,61497450.0,4,1,3,8,New Customers
+152,Fitri Rahayu 152,Silver,114.0,5,156765400.0,4,3,1,8,Potential Loyalist
+283,Sandi Utomo 283,Gold,118.0,9,71759250.0,4,1,3,8,New Customers
+224,Dian Novita 224,Regular,122.0,7,97800900.0,4,2,2,8,New Customers
+43,Bambang Prayogo 43,Regular,148.0,8,74024350.0,4,1,3,8,New Customers
+215,Wahyu Hidayat 215,Silver,152.0,5,153639000.0,4,3,1,8,Potential Loyalist
+124,Galih Permana 124,Regular,171.0,6,173355100.0,5,2,1,8,New Customers
+4,Arif Rahman 4,Regular,174.0,7,121289700.0,5,2,1,8,New Customers
+40,Sandi Utomo 40,Platinum,190.0,6,299589850.0,5,2,1,8,New Customers
+248,Sari Dewi 248,Regular,219.0,8,91987800.0,5,1,2,8,New Customers
+281,Nadia Safitri 281,Platinum,10.0,6,73580350.0,1,3,3,7,Potential Loyalist
+171,Bambang Prayogo 171,Regular,13.0,7,37526750.0,1,2,4,7,At Risk
+296,Rian Setiawan 296,Regular,14.0,5,81070350.0,1,3,3,7,Potential Loyalist
+175,Dewi Susanti 175,Silver,14.0,4,100055750.0,1,4,2,7,Potential Loyalist
+45,Arif Rahman 45,Silver,20.0,8,53286700.0,1,2,4,7,At Risk
+276,Lina Marlina 276,Silver,21.0,8,37538900.0,1,2,4,7,At Risk
+264,Bambang Prayogo 264,Regular,24.0,5,75228900.0,1,3,3,7,Potential Loyalist
+251,Dian Novita 251,Silver,28.0,6,94239950.0,2,3,2,7,Potential Loyalist
+275,Fajar Nugroho 275,Regular,31.0,6,89033450.0,2,3,2,7,Potential Loyalist
+17,Dewi Susanti 17,Regular,33.0,9,52986800.0,2,1,4,7,At Risk
+6,Sandi Utomo 6,Regular,34.0,7,66807450.0,2,2,3,7,Potential Loyalist
+22,Hendra Saputra 22,Silver,34.0,7,57210800.0,2,2,3,7,Potential Loyalist
+18,Yuli Astuti 18,Regular,39.0,5,115006150.0,2,3,2,7,Potential Loyalist
+120,Deni Kurniawan 120,Regular,51.0,7,101526950.0,3,2,2,7,Potential Loyalist
+54,Agus Wijaya 54,Regular,51.0,5,146645700.0,3,3,1,7,Potential Loyalist
+231,Agus Wijaya 231,Platinum,62.0,7,104240200.0,3,2,2,7,Potential Loyalist
+135,Fajar Nugroho 135,Gold,68.0,7,104711550.0,3,2,2,7,Potential Loyalist
+121,Sandi Utomo 121,Regular,85.0,8,76128200.0,3,1,3,7,Potential Loyalist
+134,Dewi Susanti 134,Regular,103.0,7,199663750.0,4,2,1,7,New Customers
+148,Nurul Hidayah 148,Platinum,104.0,7,145006500.0,4,2,1,7,New Customers
+71,Yusuf Hakim 71,Regular,111.0,9,90353350.0,4,1,2,7,New Customers
+59,Bambang Prayogo 59,Regular,119.0,9,90761500.0,4,1,2,7,New Customers
+203,Yusuf Hakim 203,Regular,132.0,9,94519150.0,4,1,2,7,New Customers
+236,Rian Setiawan 236,Gold,186.0,8,166146900.0,5,1,1,7,New Customers
+142,Agus Wijaya 142,Regular,193.0,9,183106350.0,5,1,1,7,New Customers
+210,Yuli Astuti 210,Silver,9.0,6,86263650.0,1,3,2,6,Lost Customers
+47,Dimas Firdaus 47,Regular,12.0,10,53370000.0,1,1,4,6,At Risk
+257,Galih Permana 257,Platinum,14.0,5,113954350.0,1,3,2,6,Lost Customers
+77,Budi Santoso 77,Silver,17.0,7,85837400.0,1,2,3,6,Lost Customers
+69,Dian Novita 69,Regular,18.0,7,73539400.0,1,2,3,6,Lost Customers
+173,Lina Marlina 173,Gold,18.0,5,103281300.0,1,3,2,6,Lost Customers
+61,Budi Santoso 61,Gold,21.0,9,39602550.0,1,1,4,6,At Risk
+128,Eko Susanto 128,Silver,26.0,7,96354650.0,2,2,2,6,Lost Customers
+21,Maya Indah 21,Regular,33.0,6,104454800.0,2,2,2,6,Lost Customers
+122,Putri Anjani 122,Regular,36.0,9,84145200.0,2,1,3,6,Lost Customers
+274,Wahyu Hidayat 274,Regular,44.0,8,70444150.0,2,1,3,6,Lost Customers
+206,Fitri Rahayu 206,Silver,47.0,7,103074250.0,2,2,2,6,Lost Customers
+166,Rizki Pratama 166,Silver,50.0,5,133057400.0,2,3,1,6,Lost Customers
+104,Sri Wahyuni 104,Silver,51.0,7,110704750.0,2,2,2,6,Lost Customers
+159,Rizki Pratama 159,Regular,54.0,6,180974350.0,3,2,1,6,Lost Customers
+154,Wahyu Hidayat 154,Gold,57.0,9,114065550.0,3,1,2,6,Lost Customers
+81,Eko Susanto 81,Regular,59.0,6,221619050.0,3,2,1,6,Lost Customers
+57,Dewi Susanti 57,Silver,63.0,6,125229350.0,3,2,1,6,Lost Customers
+233,Fitri Rahayu 233,Regular,66.0,8,111252250.0,3,1,2,6,Lost Customers
+136,Dimas Firdaus 136,Regular,77.0,6,138867200.0,3,2,1,6,Lost Customers
+36,Rian Setiawan 36,Regular,87.0,7,136641000.0,3,2,1,6,Lost Customers
+212,Yuli Astuti 212,Silver,99.0,8,139149400.0,4,1,1,6,New Customers
+255,Eko Susanto 255,Silver,129.0,9,200066750.0,4,1,1,6,New Customers
+55,Sri Wahyuni 55,Platinum,144.0,8,154477800.0,4,1,1,6,New Customers
+288,Fajar Nugroho 288,Regular,10.0,7,99211150.0,1,2,2,5,Lost Customers
+187,Sari Dewi 187,Platinum,12.0,7,85934050.0,1,2,2,5,Lost Customers
+179,Dewi Susanti 179,Regular,13.0,7,100394250.0,1,2,2,5,Lost Customers
+247,Yuli Astuti 247,Regular,16.0,8,79796200.0,1,1,3,5,Lost Customers
+107,Yusuf Hakim 107,Gold,16.0,5,122973650.0,1,3,1,5,Lost Customers
+9,Sandi Utomo 9,Regular,17.0,8,63554500.0,1,1,3,5,Lost Customers
+12,Dimas Firdaus 12,Gold,19.0,9,61202450.0,1,1,3,5,Lost Customers
+64,Nadia Safitri 64,Silver,21.0,9,61839150.0,1,1,3,5,Lost Customers
+205,Sri Wahyuni 205,Silver,23.0,5,136136100.0,1,3,1,5,Lost Customers
+294,Eko Susanto 294,Regular,26.0,9,114895150.0,2,1,2,5,Lost Customers
+133,Cindy Amelia 133,Regular,34.0,7,142231000.0,2,2,1,5,Lost Customers
+52,Eko Susanto 52,Regular,37.0,10,92000250.0,2,1,2,5,Lost Customers
+140,Rizki Pratama 140,Regular,40.0,7,187259150.0,2,2,1,5,Lost Customers
+155,Dewi Susanti 155,Silver,43.0,7,143554550.0,2,2,1,5,Lost Customers
+5,Lina Marlina 5,Gold,43.0,6,181827900.0,2,2,1,5,Lost Customers
+178,Budi Santoso 178,Silver,45.0,8,94966350.0,2,1,2,5,Lost Customers
+35,Dian Novita 35,Regular,45.0,6,167284900.0,2,2,1,5,Lost Customers
+213,Galih Permana 213,Regular,47.0,8,90884000.0,2,1,2,5,Lost Customers
+10,Rina Kartika 10,Gold,48.0,8,105423300.0,2,1,2,5,Lost Customers
+170,Rina Kartika 170,Regular,57.0,9,146662550.0,3,1,1,5,Lost Customers
+235,Sari Dewi 235,Regular,60.0,11,269747350.0,3,1,1,5,Lost Customers
+117,Galih Permana 117,Gold,60.0,9,123256600.0,3,1,1,5,Lost Customers
+86,Deni Kurniawan 86,Gold,66.0,10,198551600.0,3,1,1,5,Lost Customers
+293,Rina Kartika 293,Regular,72.0,8,138186500.0,3,1,1,5,Lost Customers
+130,Lina Marlina 130,Regular,76.0,8,170328750.0,3,1,1,5,Lost Customers
+108,Budi Santoso 108,Platinum,88.0,8,135041150.0,3,1,1,5,Lost Customers
+70,Wahyu Hidayat 70,Silver,8.0,7,151995350.0,1,2,1,4,Lost Customers
+27,Putri Anjani 27,Gold,8.0,6,159298850.0,1,2,1,4,Lost Customers
+267,Yusuf Hakim 267,Regular,9.0,13,107476150.0,1,1,2,4,Lost Customers
+168,Bambang Prayogo 168,Regular,9.0,6,142698450.0,1,2,1,4,Lost Customers
+141,Lina Marlina 141,Regular,10.0,9,119569500.0,1,1,2,4,Lost Customers
+238,Fitri Rahayu 238,Silver,10.0,9,118633400.0,1,1,2,4,Lost Customers
+162,Fajar Nugroho 162,Platinum,11.0,6,142718850.0,1,2,1,4,Lost Customers
+158,Agus Wijaya 158,Regular,14.0,10,111362600.0,1,1,2,4,Lost Customers
+249,Nadia Safitri 249,Silver,16.0,7,171199150.0,1,2,1,4,Lost Customers
+256,Lina Marlina 256,Gold,16.0,7,124958300.0,1,2,1,4,Lost Customers
+217,Sari Dewi 217,Regular,16.0,6,140352100.0,1,2,1,4,Lost Customers
+30,Nurul Hidayah 30,Platinum,17.0,7,128732350.0,1,2,1,4,Lost Customers
+214,Rini Puspita 214,Regular,17.0,6,170429450.0,1,2,1,4,Lost Customers
+56,Eko Susanto 56,Regular,17.0,6,135869900.0,1,2,1,4,Lost Customers
+74,Sandi Utomo 74,Silver,20.0,6,173746600.0,1,2,1,4,Lost Customers
+63,Bambang Prayogo 63,Silver,22.0,7,170019700.0,1,2,1,4,Lost Customers
+228,Lina Marlina 228,Regular,26.0,10,239129750.0,2,1,1,4,Lost Customers
+76,Agus Wijaya 76,Gold,29.0,9,158150300.0,2,1,1,4,Lost Customers
+250,Rina Kartika 250,Regular,32.0,10,151590250.0,2,1,1,4,Lost Customers
+93,Agus Wijaya 93,Regular,37.0,8,133649950.0,2,1,1,4,Lost Customers
+200,Rina Kartika 200,Silver,39.0,9,132145650.0,2,1,1,4,Lost Customers
+208,Ayu Lestari 208,Regular,41.0,9,158535450.0,2,1,1,4,Lost Customers
+196,Yusuf Hakim 196,Regular,51.0,10,205966000.0,2,1,1,4,Lost Customers
+227,Deni Kurniawan 227,Silver,15.0,10,120897250.0,1,1,1,3,Lost Customers
+204,Putri Anjani 204,Regular,15.0,9,212305650.0,1,1,1,3,Lost Customers
+132,Maya Indah 132,Regular,16.0,11,240146000.0,1,1,1,3,Lost Customers
+34,Bambang Prayogo 34,Regular,17.0,9,154832600.0,1,1,1,3,Lost Customers
+89,Hendra Saputra 89,Regular,17.0,9,152565800.0,1,1,1,3,Lost Customers
+202,Galih Permana 202,Regular,20.0,8,245687550.0,1,1,1,3,Lost Customers
+125,Fajar Nugroho 125,Gold,22.0,9,173316950.0,1,1,1,3,Lost Customers

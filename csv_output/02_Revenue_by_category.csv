@@ -1,0 +1,11 @@
+department,category_name,total_qty,net_revenue,profit,avg_discount_pct
+Electronics,Laptop,1003,13964414350.0,3098414350.0,4.18
+Electronics,Smartphone,974,6806333050.0,1549433050.0,4.78
+Electronics,Audio,905,1698573300.0,571173300.0,4.35
+Home & Living,Peralatan Rumah,851,373236700.0,174176700.0,4.31
+Sport,Olahraga,992,306766850.0,163116850.0,3.65
+Fashion,Fashion Pria,861,245681700.0,127411700.0,3.92
+Fashion,Fashion Wanita,958,209907300.0,108802300.0,4.48
+Beauty,Skincare,859,101021700.0,62326700.0,4.19
+Home & Living,Furnitur,291,91774550.0,48124550.0,4.22
+Beauty,Makeup,635,72771000.0,44091000.0,3.96

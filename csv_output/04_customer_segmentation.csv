@@ -1,0 +1,5 @@
+segment,total_customer,total_order,total_revenue,avg_revenue_per_customer
+Platinum,21,108,1934341000.0,92111476.0
+Regular,165,924,13241642350.0,80252378.0
+Silver,64,373,4984954700.0,77889917.0
+Gold,50,286,3709542450.0,74190849.0
