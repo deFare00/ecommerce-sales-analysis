@@ -4,9 +4,10 @@
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=flat-square)
 ![Data](https://img.shields.io/badge/Records-4%2C715%20order%20items-orange?style=flat-square)
 
+
 > **Day 6 of Advanced SQL Learning Journey**
 > Mini project analyzing 18 months of e-commerce transaction data using SQL — covering revenue analysis, customer segmentation, RFM scoring, and business insights.
-
+🔗 **[Live Dashboard →](https://defare00.github.io/ecommerce-sales-analysis/)**
 ---
 
 ## 📌 Project Overview
@@ -151,7 +152,7 @@ ecommerce-sales-analysis/
 Aspiring Data Analyst | SQL · Data Visualization
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/defarhan-nugraha-fadhali-769001222/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/deFare00)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/defare00)
 
 ---
 
